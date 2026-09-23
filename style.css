@@ -1,0 +1,103 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideDown 0.8s ease-out forwards;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+header h1:hover {
+    transform: scale(1.05);
+}
+
+header p {
+    color: #7f8c8d;
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    animation: fadeSlideUp 0.8s ease-out 0.3s forwards;
+}
+
+.card h2 {
+    color: #2980b9;
+    margin-top: 0;
+}
+
+.alert {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border-left: 5px solid #ffeeba;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 0.95em;
+    line-height: 1.5;
+    text-align: left;
+    animation: pulse 2s infinite 1.2s;
+}
+
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); /* Bayangan melebar dan memudar */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+    }
+}
